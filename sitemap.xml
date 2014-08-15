@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://tanghaotsui.github.io/blog/2014/08/16/Error-Teachers-Comes-A-Letter/</loc>
+    <lastmod>2014-08-16T00:51:10+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://tanghaotsui.github.io/blog/2014/08/15/i-like-it/</loc>
     <lastmod>2014-08-15T15:23:53+08:00</lastmod>
     <priority>0.8</priority>
@@ -11,14 +17,14 @@
   
   <url>
     <loc>http://tanghaotsui.github.io/blog/archives/</loc>
-    <lastmod>2014-08-16T00:47:16+08:00</lastmod>
+    <lastmod>2014-08-16T00:53:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://tanghaotsui.github.io/</loc>
-    <lastmod>2014-08-16T00:47:16+08:00</lastmod>
+    <lastmod>2014-08-16T00:53:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
