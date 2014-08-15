@@ -4,7 +4,7 @@
   <title><![CDATA[XutenghaoBlog]]></title>
   <link href="http://tanghaotsui.github.io/atom.xml" rel="self"/>
   <link href="http://tanghaotsui.github.io/"/>
-  <updated>2014-08-16T01:27:37+08:00</updated>
+  <updated>2014-08-16T01:43:32+08:00</updated>
   <id>http://tanghaotsui.github.io/</id>
   <author>
     <name><![CDATA[Xutenghao]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Build Web Develope Environment On Mac OS]]></title>
+    <link href="http://tanghaotsui.github.io/blog/2014/08/16/build-web-develope-environment-on-mac-os/"/>
+    <updated>2014-08-16T01:36:25+08:00</updated>
+    <id>http://tanghaotsui.github.io/blog/2014/08/16/build-web-develope-environment-on-mac-os</id>
+    <content type="html"><![CDATA[<h2>Although this title is how to config a web develope environment, I stongly recommend a blog below</h2>
+
+<p><a href="http://trotyl.github.io/jekyll/web/2014/07/17/OSX%E4%B9%8BWeb%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" title="Title">http://trotyl.github.io</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Error Teachers Comes A Letter]]></title>
