@@ -4,7 +4,7 @@
   <title><![CDATA[XutenghaoBlog]]></title>
   <link href="http://tanghaotsui.github.io/atom.xml" rel="self"/>
   <link href="http://tanghaotsui.github.io/"/>
-  <updated>2014-08-16T01:43:32+08:00</updated>
+  <updated>2014-08-16T02:39:42+08:00</updated>
   <id>http://tanghaotsui.github.io/</id>
   <author>
     <name><![CDATA[Xutenghao]]></name>
@@ -12,6 +12,148 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Practicing Project Called party_bid is around the corner]]></title>
+    <link href="http://tanghaotsui.github.io/blog/2014/08/16/a-practicing-project-called-party-bid-is-around-the-corner/"/>
+    <updated>2014-08-16T01:46:47+08:00</updated>
+    <id>http://tanghaotsui.github.io/blog/2014/08/16/a-practicing-project-called-party-bid-is-around-the-corner</id>
+    <content type="html"><![CDATA[<h2>PartyBid, a practicing project is around the corner.</h2>
+
+<h2>From this project we can get,and which marked &ldquo;&lt;_&rdquo; is ensensial.</h2>
+
+<ul>
+<li><p>Known to OS and web</p>
+
+<ul>
+<li><p>Commandline</p>
+
+<ul>
+<li>GUI Enhance
+
+<ul>
+<li>TotalTerminal</li>
+<li>iTerm</li>
+</ul>
+</li>
+<li>Command Enhance
+
+<ul>
+<li>zsh</li>
+</ul>
+</li>
+<li>Command HotKey
+
+<ul>
+<li>Jump : Ctl+a,Ctl+e,Option</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Web Develop Application</p>
+
+<ul>
+<li><p>Local</p>
+
+<ul>
+<li>Editor &amp; IDE</li>
+<li>Vim, MacVim</li>
+<li>RubyMine, WebStorm  &lt;_</li>
+<li>Atom,Sublime Text, Textmate</li>
+<li>Note &amp; Doc
+
+<ul>
+<li>Dash</li>
+<li>Evernote</li>
+</ul>
+</li>
+<li>Debug Tools
+
+<ul>
+<li>Chrome browser  &lt;_
+
+<ul>
+<li>Inspect Element</li>
+<li>Console</li>
+<li>LocalStorage</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Website</p>
+
+<ul>
+<li>Tools   &lt;_
+
+<ul>
+<li>git: github, gitcafe</li>
+<li>trello</li>
+<li>google</li>
+</ul>
+</li>
+<li>Library
+
+<ul>
+<li>Com.CodeForDream    &lt;_
+
+<ul>
+<li>AngularJS</li>
+</ul>
+</li>
+<li>Cn.AngularJS</li>
+<li>Com.CodeAcademy
+
+<ul>
+<li>Javascript</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&amp;FAQ
+
+<ul>
+<li>Com.StackOverFlow</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Code Skill Practiced    &lt;_</p>
+
+<ul>
+<li>PartyBid
+
+<ul>
+<li> StoryBoard</li>
+<li> Refactor</li>
+</ul>
+</li>
+<li>GuessNumber
+
+<ul>
+<li>Kata</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Thought
+
+<ul>
+<li>Clean Code [XP]</li>
+<li>Refactor    &lt;_</li>
+<li>TDD [ Test Driven Develop ]  &lt;_</li>
+<li>&ldquo;Well&rdquo;,&ldquo;Less Well&rdquo;,&ldquo;?&rdquo; | &ldquo;Action&rdquo;, Get After</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Build Web Develope Environment On Mac OS]]></title>
