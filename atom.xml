@@ -4,7 +4,7 @@
   <title><![CDATA[XutenghaoBlog]]></title>
   <link href="http://tanghaotsui.github.io/atom.xml" rel="self"/>
   <link href="http://tanghaotsui.github.io/"/>
-  <updated>2014-08-16T02:39:42+08:00</updated>
+  <updated>2014-08-16T15:38:37+08:00</updated>
   <id>http://tanghaotsui.github.io/</id>
   <author>
     <name><![CDATA[Xutenghao]]></name>
@@ -14,13 +14,566 @@
 
   
   <entry>
-    <title type="html"><![CDATA[A Practicing Project Called party_bid is around the corner]]></title>
-    <link href="http://tanghaotsui.github.io/blog/2014/08/16/a-practicing-project-called-party-bid-is-around-the-corner/"/>
-    <updated>2014-08-16T01:46:47+08:00</updated>
-    <id>http://tanghaotsui.github.io/blog/2014/08/16/a-practicing-project-called-party-bid-is-around-the-corner</id>
-    <content type="html"><![CDATA[<h2>PartyBid, a practicing project is around the corner.</h2>
+    <title type="html"><![CDATA[Build Web Develope Environment On Mac OS]]></title>
+    <link href="http://tanghaotsui.github.io/blog/2014/08/16/build-web-develope-environment-on-mac-os/"/>
+    <updated>2014-08-16T01:36:25+08:00</updated>
+    <id>http://tanghaotsui.github.io/blog/2014/08/16/build-web-develope-environment-on-mac-os</id>
+    <content type="html"><![CDATA[<!--more-->
 
-<h2>From this project we can get,and which marked &ldquo;&lt;_&rdquo; is ensensial.</h2>
+
+<h2>Although this title is how to config a web develope environment, I stongly recommend a blog below</h2>
+
+<p><a href="http://trotyl.github.io/jekyll/web/2014/07/17/OSX%E4%B9%8BWeb%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" title="Title">http://trotyl.github.io</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Alfred, Error Teachers Comes A Letter]]></title>
+    <link href="http://tanghaotsui.github.io/blog/2014/08/16/Error-Teachers-Comes-A-Letter/"/>
+    <updated>2014-08-16T00:51:10+08:00</updated>
+    <id>http://tanghaotsui.github.io/blog/2014/08/16/Error-Teachers-Comes-A-Letter</id>
+    <content type="html"><![CDATA[<!--more-->
+
+
+<blockquote><p>Alfred： 你在这几天的日子里，做了很多练习，其中不免犯错。<!--more-->今天，我们请了很多讲代码的“老师”。可别小瞧他们！它们可不一般，它们都来自于你的代码。请它们来给你上这堂“纠错”课，效果可不一般哦！ 先有请老师们：</p></blockquote>
+
+<h2>Teachers</h2>
+
+<h3>Javascripts，from PartyBid</h3>
+
+<ol>
+<li>这是一个教你如何消if的实例 Javascript:</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">send_message_on_repeat</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">message_type</span><span class="p">,</span> <span class="nx">message_phone</span><span class="p">,</span> <span class="nx">message_name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">message_type</span> <span class="o">==</span> <span class="s2">&quot;bm&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">Activity</span><span class="p">.</span><span class="nx">is_has_running</span><span class="p">())</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">is_repeat</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">native_accessor</span><span class="p">.</span><span class="nx">send_sms</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">,</span> <span class="s2">&quot;已收到报名信息，请勿重复报名&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">signUpMessage</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SignUpMessage</span><span class="p">()</span>
+</span><span class='line'>            <span class="nx">signUpMessage</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">native_accessor</span><span class="p">.</span><span class="nx">send_sms</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">,</span> <span class="s2">&quot;恭喜!报名成功&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">wrappers</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">element</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;wrappers&#39;</span><span class="p">)).</span><span class="nx">scope</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">wrappers</span><span class="p">.</span><span class="nx">$apply</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">wrappers</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span>
+</span><span class='line'>            <span class="p">});</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">Activity</span><span class="p">.</span><span class="nx">find_activity_state</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_activity_state</span><span class="p">()</span> <span class="o">===</span> <span class="s2">&quot;stop&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">native_accessor</span><span class="p">.</span><span class="nx">send_sms</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">,</span> <span class="s2">&quot;Sorry,活动报名已结束&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">Activity</span><span class="p">.</span><span class="nx">find_activity_state</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_activity_state</span><span class="p">()</span> <span class="o">===</span> <span class="s2">&quot;un_start&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">native_accessor</span><span class="p">.</span><span class="nx">send_sms</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">,</span> <span class="s2">&quot;活动尚未开始,请稍后&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">native_accessor</span><span class="p">.</span><span class="nx">send_sms</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">,</span> <span class="s2">&quot;短信发送格式不属于报名范畴!&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>改为：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">Javascript</span><span class="o">:</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">message_type_varier</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">bm</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">Activity</span><span class="p">.</span><span class="nx">is_has_running</span><span class="p">())</span> <span class="p">{</span>
+</span><span class='line'>                <span class="kd">var</span> <span class="nx">message_name</span> <span class="o">=</span> <span class="nx">trim_message</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nx">process_sign_up_message</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">,</span> <span class="nx">message_name</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">Activity</span><span class="p">.</span><span class="nx">find_choosed_activity</span><span class="p">())</span> <span class="p">{</span>
+</span><span class='line'>                <span class="kd">var</span> <span class="nx">statement</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="s2">&quot;stop&quot;</span><span class="o">:</span> <span class="s2">&quot;Sorry,活动已结束&quot;</span><span class="p">,</span>
+</span><span class='line'>                    <span class="s2">&quot;un_start&quot;</span><span class="o">:</span> <span class="s2">&quot;Sorry,活动尚未开始&quot;</span>
+</span><span class='line'>                <span class="p">};</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nx">native_accessor</span><span class="p">.</span><span class="nx">send_sms</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">,</span> <span class="nx">statement</span><span class="p">[</span><span class="nx">Activity</span><span class="p">.</span><span class="nx">find_choosed_activity</span><span class="p">().</span><span class="nx">state</span><span class="p">]);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="nx">native_accessor</span><span class="p">.</span><span class="nx">send_sms</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">,</span> <span class="s2">&quot;Sorry,活动尚未开始或已结束&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">message_type_varier</span><span class="p">[</span><span class="nx">message_type</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>       <span class="k">return</span> <span class="nx">message_type_varier</span><span class="p">[</span><span class="nx">message_type</span><span class="p">]();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">native_accessor</span><span class="p">.</span><span class="nx">send_sms</span><span class="p">(</span><span class="nx">message_phone</span><span class="p">,</span> <span class="s2">&quot;短信发送格式不属于报名范畴!&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>这是一个教你如何消除嵌套if的代码：</li>
+</ol>
+
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">$scope</span><span class="p">.</span><span class="nx">total_number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">is_sms_belongs_activity_has_signed_yet</span><span class="p">())</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="nx">$scope</span><span class="p">.</span><span class="nx">in_signed_state</span> <span class="o">=</span> <span class="s2">&quot;signed_yet_or_ing&quot;</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessages</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessageNumber</span> <span class="o">=</span>    <span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessages</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessageNumber</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">localStorage</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;running&quot;</span><span class="p">)</span> <span class="c1">//假如该活动在报名，字样显示人数</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="nx">$scope</span><span class="p">.</span><span class="nx">in_signed_state</span> <span class="o">=</span> <span class="s2">&quot;signed_yet_or_ing&quot;</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessages</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessageNumber</span> <span class="o">=</span>    <span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessages</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessageNumber</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">else</span><span class="c1">//假如该活动既没存数据也不在报名的时候，都不会显示人数</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="nx">$scope</span><span class="p">.</span><span class="nx">in_signed_state</span> <span class="o">=</span> <span class="s2">&quot;not_signed&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>改好的代码：</p>
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessages</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">$scope</span><span class="p">.</span><span class="nx">total_number</span> <span class="o">=</span> <span class="nx">$scope</span><span class="p">.</span><span class="nx">signUpMessages</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nx">$scope</span><span class="p">.</span><span class="nx">show_which_title</span> <span class="o">=</span> <span class="s2">&quot;show_number&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">Activity</span><span class="p">.</span><span class="nx">is_choosed_running</span><span class="p">())</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="nx">$scope</span><span class="p">.</span><span class="nx">total_number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nx">$scope</span><span class="p">.</span><span class="nx">show_which_title</span> <span class="o">=</span> <span class="s2">&quot;show_number&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">$scope</span><span class="p">.</span><span class="nx">show_which_title</span> <span class="o">=</span> <span class="s2">&quot;none_number&quot;</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>这个例子会教你把true放在“”里，记得要加Boolean，呵呵呵…… 重点在： activity.is_choosed === &ldquo;true&rdquo;;</li>
+</ol>
+
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">Activity</span><span class="p">.</span><span class="nx">find_choosed_activity</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>   <span class="k">return</span>  <span class="nx">_</span><span class="p">(</span><span class="nx">Activity</span><span class="p">.</span><span class="nx">get_activities</span><span class="p">()).</span><span class="nx">find</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">activity</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>       <span class="k">return</span> <span class="nx">activity</span><span class="p">.</span><span class="nx">is_choosed</span> <span class="o">===</span> <span class="s2">&quot;true&quot;</span><span class="p">;</span>
+</span><span class='line'>   <span class="p">});</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>改过的代码</p>
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">Activity</span><span class="p">.</span><span class="nx">find_choosed_activity</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span>  <span class="nx">_</span><span class="p">(</span><span class="nx">Activity</span><span class="p">.</span><span class="nx">get_activities</span><span class="p">()).</span><span class="nx">find</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">activity</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">activity</span><span class="p">.</span><span class="nx">is_choosed</span> <span class="o">===</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>这个实例教会你<em> .where 不同于 </em>. find，要看清楚Doc再用。</li>
+</ol>
+
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_activity_running</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages</span><span class="p">()).</span><span class="nx">where</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">.</span><span class="nx">activity_name</span> <span class="o">===</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_running_activity</span><span class="p">().</span><span class="nx">activity_name</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_choosed</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages</span><span class="p">()).</span><span class="nx">where</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">.</span><span class="nx">activity_name</span> <span class="o">===</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_choosed_activity</span><span class="p">().</span><span class="nx">activity_name</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>改过的代码</p>
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_activity_running</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">activity_name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages</span><span class="p">()).</span><span class="nx">where</span><span class="p">({.</span><span class="nx">where</span><span class="p">({</span><span class="nx">activity_name</span><span class="o">:</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_running_activity</span><span class="p">.</span><span class="nx">activity_name</span><span class="p">});</span>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_choosed</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messdecayages</span><span class="p">()).</span><span class="nx">findwhere</span><span class="p">({</span><span class="nx">activity_name</span><span class="o">:</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_running_activity</span><span class="p">().</span><span class="nx">name</span><span class="p">});</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>这个有问题的实例教会了你一个深刻的道理。 “牵一发动全身”这句话， 它一旦牵涉到程序就大不相同了。这个“动”这个坏事还需要你来做，呵呵呵……修改了一处的代码，因为逻辑改变，然后你还需要修改它别地的代码。</li>
+</ol>
+
+
+<p>jade:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="err">#</span><span class="nx">wrappers</span><span class="p">.</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">scrollable</span>
+</span><span class='line'>  <span class="nx">ul</span><span class="p">.</span><span class="nx">list</span><span class="o">-</span><span class="nx">style</span><span class="o">-</span><span class="mi">2</span>
+</span><span class='line'>    <span class="nx">li</span><span class="p">.</span><span class="nx">clearfix</span><span class="p">.</span><span class="nx">btn</span><span class="o">-</span><span class="k">default</span><span class="p">(</span><span class="nx">ng</span><span class="o">-</span><span class="nx">repeat</span><span class="o">=</span><span class="s1">&#39;signUpMessage in signUpMessages track by $index&#39;</span><span class="p">)</span>
+</span><span class='line'>      <span class="nx">h3</span> <span class="p"></span>
+</span><span class='line'>      <span class="nx">i</span><span class="p">.</span><span class="nx">p</span><span class="o">-</span><span class="nx">left</span> <span class="p"></span>
+</span><span class='line'>      <span class="nx">span</span><span class="p">.</span><span class="nx">glyphicon</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>改过的代码</p>
+
+<p>jade:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="err">#</span><span class="nx">wrappers</span><span class="p">.</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">scrollable</span>
+</span><span class='line'>  <span class="nx">ul</span><span class="p">.</span><span class="nx">list</span><span class="o">-</span><span class="nx">style</span><span class="o">-</span><span class="mi">2</span>
+</span><span class='line'>    <span class="nx">li</span><span class="p">.</span><span class="nx">clearfix</span><span class="p">.</span><span class="nx">btn</span><span class="o">-</span><span class="k">default</span><span class="p">(</span><span class="nx">ng</span><span class="o">-</span><span class="nx">repeat</span><span class="o">=</span><span class="s1">&#39;signUpMessage in signUpMessages track by $index&#39;</span><span class="p">)</span>
+</span><span class='line'>      <span class="nx">h3</span> <span class="p"></span>
+</span><span class='line'>      <span class="nx">i</span><span class="p">.</span><span class="nx">p</span><span class="o">-</span><span class="nx">left</span> <span class="p"></span>
+</span><span class='line'>      <span class="nx">span</span><span class="p">.</span><span class="nx">glyphicon</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>原因</p>
+
+<p>在你以前的代码里</p>
+
+<p>曾经用的是name 和 phone</p>
+
+<p>而现在你用的是</p>
+
+<p>message_name 和 message_phone</p>
+
+<p>下面是你“牵”的那“一发”，就是你修改过的地方</p>
+
+<p>以前的代码：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="kd">function</span> <span class="nx">SignUpMessage</span><span class="p">(</span><span class="nx">register_name</span><span class="p">,</span><span class="nx">phone</span><span class="p">,</span> <span class="nx">activity_name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">register_name</span> <span class="o">=</span> <span class="nx">register_name</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">phone</span> <span class="o">=</span> <span class="nx">phone</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">activity_name</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>现在的代码</p>
+
+<p>现在改了名字</p>
+
+<p>以前的<code>register_name</code>， <code>phone</code>， <code>activity_name</code></p>
+
+<p>改成了<code>message_name</code>，<code>message_phone</code> ， <code>activity_name</code></p>
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="kd">function</span> <span class="nx">SignUpMessage</span><span class="p">(</span><span class="nx">message_name</span><span class="p">,</span> <span class="nx">message_phone</span><span class="p">,</span> <span class="nx">activity_name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">message_name</span> <span class="o">=</span> <span class="nx">message_name</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">message_phone</span> <span class="o">=</span> <span class="nx">message_phone</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">activity_name</span> <span class="o">=</span> <span class="nx">activity_name</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>你可别忘了，“全身”可不止这么一点，这里还有</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'> <span class="err">￼</span><span class="nx">signUpMessages</span><span class="err">：</span><span class="p">[</span>
+</span><span class='line'> <span class="p">{</span><span class="s2">&quot;register_name&quot;</span><span class="o">:</span><span class="s2">&quot;XX人_1&quot;</span><span class="p">,</span><span class="s2">&quot;message_phone&quot;</span><span class="o">:</span><span class="s2">&quot;18349131319&quot;</span><span class="p">,</span><span class="s2">&quot;activity_name&quot;</span><span class="o">:</span><span class="s2">&quot;出差&quot;</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="s2">&quot;register_name&quot;</span><span class="o">:</span><span class="s2">&quot;XX人_2&quot;</span><span class="p">,</span><span class="s2">&quot;message_phone&quot;</span><span class="o">:</span><span class="s2">&quot;18349131319&quot;</span><span class="p">,</span><span class="s2">&quot;activity_name&quot;</span><span class="o">:</span><span class="s2">&quot;出差&quot;</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="s2">&quot;register_name&quot;</span><span class="o">:</span><span class="s2">&quot;XX人_3&quot;</span><span class="p">,</span><span class="s2">&quot;message_phone&quot;</span><span class="o">:</span><span class="s2">&quot;18349131319&quot;</span><span class="p">,</span><span class="s2">&quot;activity_name&quot;</span><span class="o">:</span><span class="s2">&quot;出差&quot;</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="s2">&quot;register_name&quot;</span><span class="o">:</span><span class="s2">&quot;XX人_4&quot;</span><span class="p">,</span><span class="s2">&quot;message_phone&quot;</span><span class="o">:</span><span class="s2">&quot;18349131319&quot;</span><span class="p">,</span><span class="s2">&quot;activity_name&quot;</span><span class="o">:</span><span class="s2">&quot;出差&quot;</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="s2">&quot;register_name&quot;</span><span class="o">:</span><span class="s2">&quot;XX人_5&quot;</span><span class="p">,</span><span class="s2">&quot;message_phone&quot;</span><span class="o">:</span><span class="s2">&quot;18349131319&quot;</span><span class="p">,</span><span class="s2">&quot;activity_name&quot;</span><span class="o">:</span><span class="s2">&quot;出差&quot;</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="s2">&quot;register_name&quot;</span><span class="o">:</span><span class="s2">&quot;XX人_6&quot;</span><span class="p">,</span><span class="s2">&quot;message_phone&quot;</span><span class="o">:</span><span class="s2">&quot;18349131319&quot;</span><span class="p">,</span><span class="s2">&quot;activity_name&quot;</span><span class="o">:</span><span class="s2">&quot;出差&quot;</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="s2">&quot;register_name&quot;</span><span class="o">:</span><span class="s2">&quot;XX人_7&quot;</span><span class="p">,</span><span class="s2">&quot;message_phone&quot;</span><span class="o">:</span><span class="s2">&quot;18349131319&quot;</span><span class="p">,</span><span class="s2">&quot;activity_name&quot;</span><span class="o">:</span><span class="s2">&quot;出差&quot;</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="s2">&quot;register_name&quot;</span><span class="o">:</span><span class="s2">&quot;XX人_8&quot;</span><span class="p">,</span><span class="s2">&quot;message_phone&quot;</span><span class="o">:</span><span class="s2">&quot;18349131319&quot;</span><span class="p">,</span><span class="s2">&quot;activity_name&quot;</span><span class="o">:</span><span class="s2">&quot;出差&quot;</span><span class="p">},</span>
+</span><span class='line'> <span class="p">{</span><span class="s2">&quot;register_name&quot;</span><span class="o">:</span><span class="s2">&quot;XX人_9&quot;</span><span class="p">,</span><span class="s2">&quot;message_phone&quot;</span><span class="o">:</span><span class="s2">&quot;18349131319&quot;</span><span class="p">,</span><span class="s2">&quot;activity_name&quot;</span><span class="o">:</span><span class="s2">&quot;出差&quot;</span><span class="p">}]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>这个实例只是用来教你，保存现场不及时，就是这个下场。呵呵呵……</li>
+</ol>
+
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">is_repeat</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_activity_running</span><span class="p">()).</span><span class="nx">some</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">.</span><span class="nx">message_phone</span> <span class="o">===</span> <span class="nx">message_phone</span><span class="p">)</span> <span class="p">;</span>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>改过的代码</p>
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">is_repeat</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">message_phone</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_activity_running</span><span class="p">()).</span><span class="nx">some</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">signUpMessage</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>         <span class="k">return</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">.</span><span class="nx">message_phone</span> <span class="o">===</span> <span class="nx">message_phone</span><span class="p">);</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>这个实例教你，熟悉underscore要从熟悉它的函数参数做起。发现第一个函数需要参数</li>
+</ol>
+
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_activity_running</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_choosed</span><span class="p">()).</span><span class="nx">where</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">.</span><span class="nx">activity_name</span> <span class="o">===</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_running_activity</span><span class="p">().</span><span class="nx">name</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>改过的代码</p>
+
+<p>Javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_activity_running</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_choosed</span><span class="p">()).</span><span class="nx">where</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">(</span><span class="nx">signUpMessage</span><span class="p">.</span><span class="nx">activity_name</span> <span class="o">===</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_running_activity</span><span class="p">().</span><span class="nx">name</span><span class="p">);</span>
+</span><span class='line'>       <span class="p">})</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>这个实例，问题看似不大，但他教你要时刻注意你需要的是什么，且看：<code>&lt;get_messages_choosed()&gt;</code> 和 <code>&lt;get_messages()&gt;</code></li>
+</ol>
+
+
+<p>javascript:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_choosed</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">activity_name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages</span><span class="p">()).</span><span class="nx">where</span><span class="p">({</span><span class="nx">activity_name</span><span class="o">:</span> <span class="nx">activity_name</span><span class="p">});</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_activity_running</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span> <span class="nx">get_messages_choosed</span><span class="p">).</span><span class="nx">where</span><span class="p">({</span><span class="nx">activity_name</span><span class="o">:</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_running_activity</span><span class="p">().</span><span class="nx">name</span><span class="p">})</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>修改后的代码</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_choosed</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">activity_name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages</span><span class="p">()).</span><span class="nx">where</span><span class="p">({</span><span class="nx">activity_name</span><span class="o">:</span> <span class="nx">activity_name</span><span class="p">});</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='Javascript'><span class='line'><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages_activity_running</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">_</span><span class="p">(</span><span class="nx">SignUpMessage</span><span class="p">.</span><span class="nx">get_messages</span><span class="p">()).</span><span class="nx">where</span><span class="p">({</span><span class="nx">activity_name</span><span class="o">:</span> <span class="nx">Activity</span><span class="p">.</span><span class="nx">find_running_activity</span><span class="p">().</span><span class="nx">name</span><span class="p">})</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>怎么样，Alfred，老师们讲得不错吧！今天又让你学到了不少知识吧！下一次还有更多新老师值得期待哦，下次再见！</p>
+
+<p>August 4, 2014 10:25 PM</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Practicing Project Called Party Bid Is Around The Corner copy]]></title>
+    <link href="http://tanghaotsui.github.io/blog/2014/08/16/a-practicing-project-called-party-bid-is-around-the-corner%20copy/"/>
+    <updated>2014-08-16T00:00:00+08:00</updated>
+    <id>http://tanghaotsui.github.io/blog/2014/08/16/a-practicing-project-called-party-bid-is-around-the-corner copy</id>
+    <content type="html"><![CDATA[<h3>PartyBid, a practicing project is around the corner.</h3>
+
+<h4>From this project we can get,and which marked &ldquo;&lt;_&rdquo; is ensensial.</h4>
 
 <ul>
 <li><p>Known to OS and web</p>
@@ -133,12 +686,8 @@
 <li> Refactor</li>
 </ul>
 </li>
-<li>GuessNumber
-
-<ul>
+<li>GuessNumber</li>
 <li>Kata</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Thought
@@ -152,548 +701,6 @@
 </li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Build Web Develope Environment On Mac OS]]></title>
-    <link href="http://tanghaotsui.github.io/blog/2014/08/16/build-web-develope-environment-on-mac-os/"/>
-    <updated>2014-08-16T01:36:25+08:00</updated>
-    <id>http://tanghaotsui.github.io/blog/2014/08/16/build-web-develope-environment-on-mac-os</id>
-    <content type="html"><![CDATA[<h2>Although this title is how to config a web develope environment, I stongly recommend a blog below</h2>
-
-<p><a href="http://trotyl.github.io/jekyll/web/2014/07/17/OSX%E4%B9%8BWeb%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" title="Title">http://trotyl.github.io</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Error Teachers Comes A Letter]]></title>
-    <link href="http://tanghaotsui.github.io/blog/2014/08/16/Error-Teachers-Comes-A-Letter/"/>
-    <updated>2014-08-16T00:51:10+08:00</updated>
-    <id>http://tanghaotsui.github.io/blog/2014/08/16/Error-Teachers-Comes-A-Letter</id>
-    <content type="html"><![CDATA[<blockquote><p>Alfred： 你在这几天的日子里，做了很多练习，其中不免犯错。今天，我们请了很多讲代码的“老师”。可别小瞧他们！它们可不一般，它们都来自于你的代码。请它们来给你上这堂“纠错”课，效果可不一般哦！ 先有请老师们：</p></blockquote>
-
-<h2>Teachers</h2>
-
-<h3>Javascripts，from PartyBid</h3>
-
-<ol>
-<li>这是一个教你如何消if的实例 Javascript:</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SignUpMessage.send_message_on_repeat = function (message_type, message_phone, message_name) {
-</span><span class='line'>if (message_type == "bm") {
-</span><span class='line'>    if (Activity.is_has_running()) {
-</span><span class='line'>        if (SignUpMessage.is_repeat(message_phone)) {
-</span><span class='line'>            native_accessor.send_sms(message_phone, "已收到报名信息，请勿重复报名");
-</span><span class='line'>        }
-</span><span class='line'>        else {
-</span><span class='line'>            var signUpMessage = new SignUpMessage()
-</span><span class='line'>            signUpMessage.save();
-</span><span class='line'>            native_accessor.send_sms(message_phone, "恭喜!报名成功");
-</span><span class='line'>            var wrappers = angular.element(document.getElementById('wrappers')).scope();
-</span><span class='line'>            wrappers.$apply(function () {
-</span><span class='line'>                wrappers.refresh();
-</span><span class='line'>            });
-</span><span class='line'>        }
-</span><span class='line'>    }
-</span><span class='line'>    else {
-</span><span class='line'>        if (Activity.find_activity_state() && Activity.find_activity_state() === "stop") {
-</span><span class='line'>            native_accessor.send_sms(message_phone, "Sorry,活动报名已结束");
-</span><span class='line'>        }
-</span><span class='line'>        if (Activity.find_activity_state() && Activity.find_activity_state() === "un_start") {
-</span><span class='line'>            native_accessor.send_sms(message_phone, "活动尚未开始,请稍后");
-</span><span class='line'>        }
-</span><span class='line'>    }
-</span><span class='line'>}
-</span><span class='line'>else {
-</span><span class='line'>    native_accessor.send_sms(message_phone, "短信发送格式不属于报名范畴!");
-</span><span class='line'>}
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>改为：</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Javascript:
-</span><span class='line'>var message_type_varier = {
-</span><span class='line'>        bm: function () {
-</span><span class='line'>            if (Activity.is_has_running()) {
-</span><span class='line'>                var message_name = trim_message.slice(2);
-</span><span class='line'>                return process_sign_up_message(message_phone, message_name);
-</span><span class='line'>            }
-</span><span class='line'>            if (Activity.find_choosed_activity()) {
-</span><span class='line'>                var statement = {
-</span><span class='line'>                    "stop": "Sorry,活动已结束",
-</span><span class='line'>                    "un_start": "Sorry,活动尚未开始"
-</span><span class='line'>                };
-</span><span class='line'>                return native_accessor.send_sms(message_phone, statement[Activity.find_choosed_activity().state]);
-</span><span class='line'>            }
-</span><span class='line'>            native_accessor.send_sms(message_phone, "Sorry,活动尚未开始或已结束");
-</span><span class='line'>        }
-</span><span class='line'>    };
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>    if (message_type_varier[message_type]) {
-</span><span class='line'>       return message_type_varier[message_type]();
-</span><span class='line'>    }
-</span><span class='line'>    native_accessor.send_sms(message_phone, "短信发送格式不属于报名范畴!");</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>这是一个教你如何消除嵌套if的代码：</li>
-</ol>
-
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$scope.total_number = 0;
-</span><span class='line'>        if (is_sms_belongs_activity_has_signed_yet())
-</span><span class='line'>        {
-</span><span class='line'>            $scope.in_signed_state = "signed_yet_or_ing";
-</span><span class='line'>            if ($scope.signUpMessages) {
-</span><span class='line'>                $scope.signUpMessageNumber =    $scope.signUpMessages.length;
-</span><span class='line'>            } else {
-</span><span class='line'>                $scope.signUpMessageNumber = "0";
-</span><span class='line'>            }
-</span><span class='line'>        }
-</span><span class='line'>        else if (localStorage['state'] == "running") //假如该活动在报名，字样显示人数
-</span><span class='line'>        {
-</span><span class='line'>            $scope.in_signed_state = "signed_yet_or_ing";
-</span><span class='line'>            if ($scope.signUpMessages) {
-</span><span class='line'>                $scope.signUpMessageNumber =    $scope.signUpMessages.length;
-</span><span class='line'>            } else {
-</span><span class='line'>                $scope.signUpMessageNumber = "0";
-</span><span class='line'>            }
-</span><span class='line'>        }
-</span><span class='line'>        else//假如该活动既没存数据也不在报名的时候，都不会显示人数
-</span><span class='line'>        {
-</span><span class='line'>            $scope.in_signed_state = "not_signed";
-</span><span class='line'>        }</span></code></pre></td></tr></table></div></figure>
-
-
-<p>改好的代码：</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Javascript:
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>            if($scope.signUpMessages) {
-</span><span class='line'>                $scope.total_number = $scope.signUpMessages.length;
-</span><span class='line'>                return $scope.show_which_title = "show_number";
-</span><span class='line'>            }
-</span><span class='line'>            if(Activity.is_choosed_running())
-</span><span class='line'>            {
-</span><span class='line'>                $scope.total_number = 0;
-</span><span class='line'>                return $scope.show_which_title = "show_number";
-</span><span class='line'>            }
-</span><span class='line'>            $scope.show_which_title = "none_number";</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>这个例子会教你把true放在“”里，记得要加Boolean，呵呵呵…… 重点在： activity.is_choosed === &ldquo;true&rdquo;;</li>
-</ol>
-
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Activity.find_choosed_activity = function () {
-</span><span class='line'>   return  _(Activity.get_activities()).find(function (activity) {
-</span><span class='line'>       return activity.is_choosed === "true";
-</span><span class='line'>   });
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<p>改过的代码</p>
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Activity.find_choosed_activity = function () {
-</span><span class='line'>    return  _(Activity.get_activities()).find(function (activity) {
-</span><span class='line'>        return activity.is_choosed === true;
-</span><span class='line'>    });
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>这个实例教会你<em> .where 不同于 </em>. find，要看清楚Doc再用。</li>
-</ol>
-
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SignUpMessage.get_messages_activity_running = function () {
-</span><span class='line'>    return _(SignUpMessage.get_messages()).where(function (signUpMessage) {
-</span><span class='line'>        return (signUpMessage.activity_name === Activity.find_running_activity().activity_name);
-</span><span class='line'>    })
-</span><span class='line'>};
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>SignUpMessage.get_messages_choosed = function () {
-</span><span class='line'>    return _(SignUpMessage.get_messages()).where(function (signUpMessage) {
-</span><span class='line'>        return (signUpMessage.activity_name === Activity.find_choosed_activity().activity_name);
-</span><span class='line'>    })
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<p>改过的代码</p>
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SignUpMessage.get_messages_activity_running = function (activity_name) {
-</span><span class='line'>    return _(SignUpMessage.get_messages()).where({.where({activity_name: Activity.find_running_activity.activity_name});
-</span><span class='line'>    })
-</span><span class='line'>};
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>SignUpMessage.get_messages_choosed = function () {
-</span><span class='line'>    return _(SignUpMessage.get_messdecayages()).findwhere({activity_name: Activity.find_running_activity().name});
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>这个有问题的实例教会了你一个深刻的道理。 “牵一发动全身”这句话， 它一旦牵涉到程序就大不相同了。这个“动”这个坏事还需要你来做，呵呵呵……修改了一处的代码，因为逻辑改变，然后你还需要修改它别地的代码。</li>
-</ol>
-
-
-<p>jade:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#wrappers.wrapper.scrollable
-</span><span class='line'>  ul.list-style-2
-</span><span class='line'>    li.clearfix.btn-default(ng-repeat='signUpMessage in signUpMessages track by $index')
-</span><span class='line'>      h3 
-</span><span class='line'>      i.p-left 
-</span><span class='line'>      span.glyphicon</span></code></pre></td></tr></table></div></figure>
-
-
-<p>改过的代码</p>
-
-<p>jade:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#wrappers.wrapper.scrollable
-</span><span class='line'>  ul.list-style-2
-</span><span class='line'>    li.clearfix.btn-default(ng-repeat='signUpMessage in signUpMessages track by $index')
-</span><span class='line'>      h3 
-</span><span class='line'>      i.p-left 
-</span><span class='line'>      span.glyphicon</span></code></pre></td></tr></table></div></figure>
-
-
-<p>原因</p>
-
-<p>在你以前的代码里</p>
-
-<p>曾经用的是name 和 phone</p>
-
-<p>而现在你用的是</p>
-
-<p>message_name 和 message_phone</p>
-
-<p>下面是你“牵”的那“一发”，就是你修改过的地方</p>
-
-<p>以前的代码：</p>
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>function SignUpMessage(register_name,phone, activity_name) {
-</span><span class='line'>    this.register_name = register_name;
-</span><span class='line'>    this.phone = phone;
-</span><span class='line'>    this.name = activity_name;
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>现在的代码</p>
-
-<p>现在改了名字</p>
-
-<p>以前的<code>register_name</code>， <code>phone</code>， <code>activity_name</code></p>
-
-<p>改成了<code>message_name</code>，<code>message_phone</code> ， <code>activity_name</code></p>
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>function SignUpMessage(message_name, message_phone, activity_name) {
-</span><span class='line'>    this.message_name = message_name;
-</span><span class='line'>    this.message_phone = message_phone;
-</span><span class='line'>    this.activity_name = activity_name;
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>你可别忘了，“全身”可不止这么一点，这里还有 ￼signUpMessages： [{&ldquo;register_name&rdquo;:&ldquo;XX人<em>1&rdquo;,&ldquo;message_phone&rdquo;:&ldquo;18349131319&rdquo;,&ldquo;activity_name&rdquo;:&ldquo;出差&rdquo;}, {&ldquo;register_name&rdquo;:&ldquo;XX人</em>2&rdquo;,&ldquo;message_phone&rdquo;:&ldquo;18349131319&rdquo;,&ldquo;activity_name&rdquo;:&ldquo;出差&rdquo;}, {&ldquo;register_name&rdquo;:&ldquo;XX人<em>3&rdquo;,&ldquo;message_phone&rdquo;:&ldquo;18349131319&rdquo;,&ldquo;activity_name&rdquo;:&ldquo;出差&rdquo;}, {&ldquo;register_name&rdquo;:&ldquo;XX人</em>4&rdquo;,&ldquo;message_phone&rdquo;:&ldquo;18349131319&rdquo;,&ldquo;activity_name&rdquo;:&ldquo;出差&rdquo;}, {&ldquo;register_name&rdquo;:&ldquo;XX人<em>5&rdquo;,&ldquo;message_phone&rdquo;:&ldquo;18349131319&rdquo;,&ldquo;activity_name&rdquo;:&ldquo;出差&rdquo;}, {&ldquo;register_name&rdquo;:&ldquo;XX人</em>6&rdquo;,&ldquo;message_phone&rdquo;:&ldquo;18349131319&rdquo;,&ldquo;activity_name&rdquo;:&ldquo;出差&rdquo;}, {&ldquo;register_name&rdquo;:&ldquo;XX人<em>7&rdquo;,&ldquo;message_phone&rdquo;:&ldquo;18349131319&rdquo;,&ldquo;activity_name&rdquo;:&ldquo;出差&rdquo;}, {&ldquo;register_name&rdquo;:&ldquo;XX人</em>8&rdquo;,&ldquo;message_phone&rdquo;:&ldquo;18349131319&rdquo;,&ldquo;activity_name&rdquo;:&ldquo;出差&rdquo;}, {&ldquo;register_name&rdquo;:&ldquo;XX人_9&rdquo;,&ldquo;message_phone&rdquo;:&ldquo;18349131319&rdquo;,&ldquo;activity_name&rdquo;:&ldquo;出差&rdquo;}]
-6. 这个实例只是用来教你，保存现场不及时，就是这个下场。呵呵呵……</p>
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SignUpMessage.is_repeat = function () {
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>    return _(SignUpMessage.get_messages_activity_running()).some(function (signUpMessage) {
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>        return (signUpMessage.message_phone === message_phone) ;
-</span><span class='line'>    })
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<p>改过的代码</p>
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SignUpMessage.is_repeat = function (message_phone) {
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>    return _(SignUpMessage.get_messages_activity_running()).some(function(signUpMessage) {
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>         return (signUpMessage.message_phone === message_phone);
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>})
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>这个实例教你，熟悉underscore要从熟悉它的函数参数做起。发现第一个函数需要参数</li>
-</ol>
-
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SignUpMessage.get_messages_activity_running = function () {
-</span><span class='line'>    return _(SignUpMessage.get_messages_choosed()).where(function () {
-</span><span class='line'>        return (signUpMessage.activity_name === Activity.find_running_activity().name);
-</span><span class='line'>    })
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<p>改过的代码</p>
-
-<p>Javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SignUpMessage.get_messages_activity_running = function () {
-</span><span class='line'>    return _(SignUpMessage.get_messages_choosed()).where(function (signUpMessage) {
-</span><span class='line'>        return (signUpMessage.activity_name === Activity.find_running_activity().name);
-</span><span class='line'>       })
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>这个实例，问题看似不大，但他教你要时刻注意你需要的是什么，且看：<code>&lt;get_messages_choosed()&gt;</code> 和 <code>&lt;get_messages()&gt;</code></li>
-</ol>
-
-
-<p>javascript:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SignUpMessage.get_messages_choosed = function (activity_name) {
-</span><span class='line'>    return _(SignUpMessage.get_messages()).where({activity_name: activity_name});
-</span><span class='line'>};
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>SignUpMessage.get_messages_activity_running = function () {
-</span><span class='line'>    return _(SignUpMessage. get_messages_choosed).where({activity_name: Activity.find_running_activity().name})
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<p>修改后的代码</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SignUpMessage.get_messages_choosed = function (activity_name) {
-</span><span class='line'>    return _(SignUpMessage.get_messages()).where({activity_name: activity_name});
-</span><span class='line'>};
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>SignUpMessage.get_messages_activity_running = function () {
-</span><span class='line'>    return _(SignUpMessage.get_messages()).where({activity_name: Activity.find_running_activity().name})
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<p>怎么样，Alfred，老师们讲得不错吧！今天又让你学到了不少知识吧！下一次还有更多新老师值得期待哦，下次再见！</p>
-
-<p>August 4, 2014 10:25 PM</p>
 ]]></content>
   </entry>
   
